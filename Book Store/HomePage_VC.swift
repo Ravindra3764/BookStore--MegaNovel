@@ -29,6 +29,8 @@ extension HomePage_VC : UICollectionViewDelegate , UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        let cell = self.HomeScreen_ScrlView.dequeueReusableCell(withReuseIdentifier: "HomeScreen_collectionView_cell", for: "HomeScreen_collectionView_cell") as! HomeScreen_collectionView_cell
+        cell.
         
         
     }
