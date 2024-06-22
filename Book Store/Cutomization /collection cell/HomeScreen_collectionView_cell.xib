@@ -21,10 +21,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="175" height="227"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Book section 1" translatesAutoresizingMaskIntoConstraints="NO" id="dab-0I-tsd">
-                                <rect key="frame" x="27" y="13" width="121" height="209"/>
+                                <rect key="frame" x="22" y="17" width="131" height="157"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="157" id="4lN-gi-yri"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geD-zN-XcH">
-                                <rect key="frame" x="27" y="198" width="120" height="21"/>
+                                <rect key="frame" x="45" y="198" width="85.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ang-ef-YDZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -32,13 +38,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="geD-zN-XcH" secondAttribute="bottom" constant="8" id="8pD-dR-tAD"/>
-                            <constraint firstItem="dab-0I-tsd" firstAttribute="leading" secondItem="hwf-ua-6zC" secondAttribute="leading" constant="27" id="Iqc-pl-FKp"/>
-                            <constraint firstAttribute="bottom" secondItem="dab-0I-tsd" secondAttribute="bottom" constant="5" id="OBH-fn-nJQ"/>
-                            <constraint firstItem="dab-0I-tsd" firstAttribute="top" secondItem="hwf-ua-6zC" secondAttribute="top" constant="13" id="P8q-LS-VgQ"/>
-                            <constraint firstAttribute="trailing" secondItem="geD-zN-XcH" secondAttribute="trailing" constant="28" id="XJc-qf-1LV"/>
-                            <constraint firstAttribute="trailing" secondItem="dab-0I-tsd" secondAttribute="trailing" constant="27" id="iTk-TB-IWt"/>
-                            <constraint firstItem="geD-zN-XcH" firstAttribute="leading" secondItem="hwf-ua-6zC" secondAttribute="leading" constant="27" id="zG1-E3-vd2"/>
+                            <constraint firstAttribute="trailing" secondItem="dab-0I-tsd" secondAttribute="trailing" constant="22" id="BVt-Ew-IP9"/>
+                            <constraint firstItem="dab-0I-tsd" firstAttribute="top" secondItem="hwf-ua-6zC" secondAttribute="top" constant="17" id="GlQ-M9-dHb"/>
+                            <constraint firstAttribute="trailing" secondItem="geD-zN-XcH" secondAttribute="trailing" constant="44.5" id="bX6-CT-auA"/>
+                            <constraint firstItem="dab-0I-tsd" firstAttribute="leading" secondItem="hwf-ua-6zC" secondAttribute="leading" constant="22" id="gpE-zd-TUS"/>
+                            <constraint firstItem="geD-zN-XcH" firstAttribute="top" secondItem="dab-0I-tsd" secondAttribute="bottom" constant="24" id="kwa-RC-G5x"/>
+                            <constraint firstAttribute="bottom" secondItem="geD-zN-XcH" secondAttribute="bottom" constant="8" id="px9-4f-wNP"/>
+                            <constraint firstItem="geD-zN-XcH" firstAttribute="leading" secondItem="hwf-ua-6zC" secondAttribute="leading" constant="45" id="uFs-7l-3yx"/>
                         </constraints>
                     </view>
                 </subviews>

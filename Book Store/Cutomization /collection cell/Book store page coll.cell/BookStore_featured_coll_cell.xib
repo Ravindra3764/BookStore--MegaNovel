@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BookStore_featured_coll_cell" customModule="Book_Store" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="299" height="214"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="299" height="214"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mY3-mi-q1s">
+                        <rect key="frame" x="0.0" y="0.0" width="299" height="214"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1Z-eg-wqq">
+                                <rect key="frame" x="10" y="15" width="279" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="3p6-zA-sKX"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Short Stories">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="BodoniSvtyTwoITCTT-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book image 1" translatesAutoresizingMaskIntoConstraints="NO" id="hRs-vk-h5Z">
+                                <rect key="frame" x="5" y="43" width="289" height="156"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="156" id="0cc-64-AZq"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hRs-vk-h5Z" firstAttribute="leading" secondItem="mY3-mi-q1s" secondAttribute="leading" constant="5" id="3Ki-Cf-nqJ"/>
+                            <constraint firstAttribute="bottom" secondItem="hRs-vk-h5Z" secondAttribute="bottom" constant="15" id="3vo-fm-sRU"/>
+                            <constraint firstItem="q1Z-eg-wqq" firstAttribute="leading" secondItem="mY3-mi-q1s" secondAttribute="leading" constant="10" id="9tp-qg-UDN"/>
+                            <constraint firstAttribute="trailing" secondItem="hRs-vk-h5Z" secondAttribute="trailing" constant="5" id="L85-Hi-DkL"/>
+                            <constraint firstItem="q1Z-eg-wqq" firstAttribute="top" secondItem="mY3-mi-q1s" secondAttribute="top" constant="15" id="STz-Ld-cHS"/>
+                            <constraint firstItem="hRs-vk-h5Z" firstAttribute="top" secondItem="q1Z-eg-wqq" secondAttribute="bottom" constant="7" id="Z1h-5x-0bV"/>
+                            <constraint firstAttribute="trailing" secondItem="q1Z-eg-wqq" secondAttribute="trailing" constant="10" id="ajJ-7c-rK6"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="mY3-mi-q1s" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Qcp-eI-hdQ"/>
+                <constraint firstAttribute="trailing" secondItem="mY3-mi-q1s" secondAttribute="trailing" id="gmn-5x-VGP"/>
+                <constraint firstItem="mY3-mi-q1s" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kUT-ty-GUK"/>
+                <constraint firstAttribute="bottom" secondItem="mY3-mi-q1s" secondAttribute="bottom" id="yR9-kn-5RU"/>
+            </constraints>
+            <size key="customSize" width="299" height="214"/>
+            <connections>
+                <outlet property="FeatureBook_image" destination="hRs-vk-h5Z" id="Dlx-Yz-95S"/>
+                <outlet property="FeatureBook_title" destination="q1Z-eg-wqq" id="0tX-3h-Jmt"/>
+            </connections>
+            <point key="canvasLocation" x="342.75362318840581" y="63.616071428571423"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="book image 1" width="985" height="668"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

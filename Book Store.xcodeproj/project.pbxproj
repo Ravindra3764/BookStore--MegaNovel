@@ -11,6 +11,11 @@
 		A99AAF562C1981CB0046D9FC /* Custom View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99AAF552C1981CB0046D9FC /* Custom View.swift */; };
 		A99AAF5B2C1999E40046D9FC /* HomeScreen_collectionView_cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99AAF592C1999E40046D9FC /* HomeScreen_collectionView_cell.swift */; };
 		A99AAF5C2C1999E40046D9FC /* HomeScreen_collectionView_cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A99AAF5A2C1999E40046D9FC /* HomeScreen_collectionView_cell.xib */; };
+		A9A524AB2C1ACEC1007EA47A /* BookStore_featured_coll_cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A524A92C1ACEC1007EA47A /* BookStore_featured_coll_cell.swift */; };
+		A9A524AC2C1ACEC1007EA47A /* BookStore_featured_coll_cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9A524AA2C1ACEC1007EA47A /* BookStore_featured_coll_cell.xib */; };
+		A9A524AE2C1AD2D1007EA47A /* BookStorePage_vc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A524AD2C1AD2D1007EA47A /* BookStorePage_vc.swift */; };
+		A9B4B4F12C1C043C00342FAF /* BookType_coll_cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B4B4EF2C1C043C00342FAF /* BookType_coll_cell.swift */; };
+		A9B4B4F22C1C043C00342FAF /* BookType_coll_cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9B4B4F02C1C043C00342FAF /* BookType_coll_cell.xib */; };
 		A9BFAB2A2C194D340073640C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFAB292C194D340073640C /* AppDelegate.swift */; };
 		A9BFAB2C2C194D340073640C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFAB2B2C194D340073640C /* SceneDelegate.swift */; };
 		A9BFAB2E2C194D340073640C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFAB2D2C194D340073640C /* ViewController.swift */; };
@@ -24,6 +29,11 @@
 		A99AAF552C1981CB0046D9FC /* Custom View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Custom View.swift"; sourceTree = "<group>"; };
 		A99AAF592C1999E40046D9FC /* HomeScreen_collectionView_cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen_collectionView_cell.swift; sourceTree = "<group>"; };
 		A99AAF5A2C1999E40046D9FC /* HomeScreen_collectionView_cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreen_collectionView_cell.xib; sourceTree = "<group>"; };
+		A9A524A92C1ACEC1007EA47A /* BookStore_featured_coll_cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStore_featured_coll_cell.swift; sourceTree = "<group>"; };
+		A9A524AA2C1ACEC1007EA47A /* BookStore_featured_coll_cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookStore_featured_coll_cell.xib; sourceTree = "<group>"; };
+		A9A524AD2C1AD2D1007EA47A /* BookStorePage_vc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStorePage_vc.swift; sourceTree = "<group>"; };
+		A9B4B4EF2C1C043C00342FAF /* BookType_coll_cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookType_coll_cell.swift; sourceTree = "<group>"; };
+		A9B4B4F02C1C043C00342FAF /* BookType_coll_cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookType_coll_cell.xib; sourceTree = "<group>"; };
 		A9BFAB262C194D340073640C /* Book Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9BFAB292C194D340073640C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9BFAB2B2C194D340073640C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,10 +67,22 @@
 		A99AAF582C1999930046D9FC /* collection cell */ = {
 			isa = PBXGroup;
 			children = (
+				A9A524A82C1ACDFE007EA47A /* Book store page coll.cell */,
 				A99AAF592C1999E40046D9FC /* HomeScreen_collectionView_cell.swift */,
 				A99AAF5A2C1999E40046D9FC /* HomeScreen_collectionView_cell.xib */,
 			);
 			path = "collection cell";
+			sourceTree = "<group>";
+		};
+		A9A524A82C1ACDFE007EA47A /* Book store page coll.cell */ = {
+			isa = PBXGroup;
+			children = (
+				A9A524A92C1ACEC1007EA47A /* BookStore_featured_coll_cell.swift */,
+				A9A524AA2C1ACEC1007EA47A /* BookStore_featured_coll_cell.xib */,
+				A9B4B4EF2C1C043C00342FAF /* BookType_coll_cell.swift */,
+				A9B4B4F02C1C043C00342FAF /* BookType_coll_cell.xib */,
+			);
+			path = "Book store page coll.cell";
 			sourceTree = "<group>";
 		};
 		A9BFAB1D2C194D340073640C = {
@@ -91,6 +113,7 @@
 				A9BFAB342C194D390073640C /* LaunchScreen.storyboard */,
 				A9BFAB372C194D390073640C /* Info.plist */,
 				A99AAF522C197D6D0046D9FC /* HomePage_VC.swift */,
+				A9A524AD2C1AD2D1007EA47A /* BookStorePage_vc.swift */,
 			);
 			path = "Book Store";
 			sourceTree = "<group>";
@@ -157,6 +180,8 @@
 				A99AAF5C2C1999E40046D9FC /* HomeScreen_collectionView_cell.xib in Resources */,
 				A9BFAB332C194D390073640C /* Assets.xcassets in Resources */,
 				A9BFAB312C194D340073640C /* Main.storyboard in Resources */,
+				A9B4B4F22C1C043C00342FAF /* BookType_coll_cell.xib in Resources */,
+				A9A524AC2C1ACEC1007EA47A /* BookStore_featured_coll_cell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,8 +195,11 @@
 				A9BFAB2E2C194D340073640C /* ViewController.swift in Sources */,
 				A9BFAB2A2C194D340073640C /* AppDelegate.swift in Sources */,
 				A99AAF532C197D6D0046D9FC /* HomePage_VC.swift in Sources */,
+				A9A524AB2C1ACEC1007EA47A /* BookStore_featured_coll_cell.swift in Sources */,
 				A99AAF5B2C1999E40046D9FC /* HomeScreen_collectionView_cell.swift in Sources */,
 				A99AAF562C1981CB0046D9FC /* Custom View.swift in Sources */,
+				A9A524AE2C1AD2D1007EA47A /* BookStorePage_vc.swift in Sources */,
+				A9B4B4F12C1C043C00342FAF /* BookType_coll_cell.swift in Sources */,
 				A9BFAB2C2C194D340073640C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
