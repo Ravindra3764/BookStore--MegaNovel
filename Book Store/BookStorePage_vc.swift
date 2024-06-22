@@ -65,10 +65,10 @@ extension BookStorePage_vc : UICollectionViewDelegate , UICollectionViewDataSour
             return cell
         }
         else{
-           let icell =  self.bookStore_kidsyoung_coll_view.dequeueReusableCell(withReuseIdentifier: "BookType_coll_cell", for: indexPath) as! BookType_coll_cell
-            
-            icell.BookTypeImage.image = self.book_type_imageArr[indexPath.row]
-            return icell
+           print("any")
+            let cell = self.bookStore_kidsyoung_coll_view.dequeueReusableCell(withReuseIdentifier: "BookType_coll_cell", for: indexPath) as! BookType_coll_cell
+            cell.BookTypeImage.image = self.book_type_imageArr[indexPath.row]
+            return cell
 
         }
             
@@ -84,4 +84,8 @@ extension BookStorePage_vc : UICollectionViewDelegate , UICollectionViewDataSour
     
     
 }
+
+
+
+
 

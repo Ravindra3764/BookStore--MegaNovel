@@ -43,7 +43,7 @@
             </constraints>
             <size key="customSize" width="157" height="219"/>
             <connections>
-                <outlet property="BookTypeImage" destination="ZWo-3Q-KMS" id="Cgc-Jg-Jwb"/>
+                <outlet property="BookTypeImage" destination="ZWo-3Q-KMS" id="4L6-0M-gIo"/>
             </connections>
             <point key="canvasLocation" x="202.17391304347828" y="117.52232142857142"/>
         </collectionViewCell>
