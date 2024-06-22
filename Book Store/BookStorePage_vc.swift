@@ -56,7 +56,6 @@ extension BookStorePage_vc : UICollectionViewDelegate , UICollectionViewDataSour
         
         cell.FeatureBook_title.text = self.booktitleArr[indexPath.row]
         cell.FeatureBook_image.image =  self.bookimageArr[indexPath.row]
-        
         return cell
         }else if collectionView == self.BookStore_booktype_coll_view{
             let cell = self.BookStore_booktype_coll_view.dequeueReusableCell(withReuseIdentifier: "BookType_coll_cell", for: indexPath) as! BookType_coll_cell
