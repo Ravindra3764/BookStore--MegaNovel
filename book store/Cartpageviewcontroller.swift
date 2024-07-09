@@ -1,9 +1,17 @@
 import UIKit
 
-class ViewController: UIViewController {
+class Cartpageviewcontroller: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalAmountLabel: UILabel!
+    
+    @IBAction func Checkout_vc(_ sender: UIButton) {
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddAddressViewController") as! AddAddressViewController; /*vc.delegate = self*/
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
     
     let productImageArr: [UIImage] = [
             UIImage(named: "image1")!,
@@ -33,7 +41,7 @@ class ViewController: UIViewController {
         }
     }
 
-    extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    extension Cartpageviewcontroller: UITableViewDelegate, UITableViewDataSource {
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return self.productImageArr.count
