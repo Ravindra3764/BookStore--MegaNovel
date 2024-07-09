@@ -1,13 +1,13 @@
 //
-//  front_vc.swift
+//  Forgot_vc.swift
 //  book store
 //
-//  Created by Apple 16 on 13/06/24.
+//  Created by Apple 16 on 14/06/24.
 //
 
 import UIKit
 
-class front_vc: UIViewController {
+class Forgot_vc: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

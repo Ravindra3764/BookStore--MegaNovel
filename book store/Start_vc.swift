@@ -1,5 +1,5 @@
 //
-//  front_vc.swift
+//  Start_vc.swift
 //  book store
 //
 //  Created by Apple 16 on 13/06/24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class front_vc: UIViewController {
+class Start_vc: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
