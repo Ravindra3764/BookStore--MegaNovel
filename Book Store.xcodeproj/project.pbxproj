@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F097FF26F43CAC648B55703 /* Pods_Book_Store.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4584717DF348A980791B78EB /* Pods_Book_Store.framework */; };
+		8E1485E72C35C5CA00D5FB70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E1485E62C35C5CA00D5FB70 /* GoogleService-Info.plist */; };
+		8E1485E92C3656FF00D5FB70 /* objectMapper_for_json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1485E82C3656FF00D5FB70 /* objectMapper_for_json.swift */; };
+		8E26BF002C2D28400080C21E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E26BEFF2C2D28400080C21E /* Model.swift */; };
+		8E5BDF2D2C350AB800B476FA /* AllTIme_bestSeller_.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E5BDF2C2C350AB800B476FA /* AllTIme_bestSeller_.json */; };
+		8E86AAF02C29706E00F0067F /* book description_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E86AAEF2C29706E00F0067F /* book description_VC.swift */; };
+		8E86AAF42C2A8FB200F0067F /* AllBook_listing_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E86AAF22C2A8FB200F0067F /* AllBook_listing_VC.swift */; };
+		8E86AAF52C2A8FB200F0067F /* AllBook_listing_VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E86AAF32C2A8FB200F0067F /* AllBook_listing_VC.xib */; };
+		8E86AAF92C2A932000F0067F /* AllBook_listing_Page_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E86AAF82C2A932000F0067F /* AllBook_listing_Page_VC.swift */; };
+		8E90E14D2C3BECCF0010DF02 /* CartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90E14C2C3BECCF0010DF02 /* CartService.swift */; };
 		A99AAF532C197D6D0046D9FC /* HomePage_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99AAF522C197D6D0046D9FC /* HomePage_VC.swift */; };
 		A99AAF562C1981CB0046D9FC /* Custom View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99AAF552C1981CB0046D9FC /* Custom View.swift */; };
 		A99AAF5B2C1999E40046D9FC /* HomeScreen_collectionView_cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99AAF592C1999E40046D9FC /* HomeScreen_collectionView_cell.swift */; };
@@ -18,13 +28,23 @@
 		A9B4B4F22C1C043C00342FAF /* BookType_coll_cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9B4B4F02C1C043C00342FAF /* BookType_coll_cell.xib */; };
 		A9BFAB2A2C194D340073640C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFAB292C194D340073640C /* AppDelegate.swift */; };
 		A9BFAB2C2C194D340073640C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFAB2B2C194D340073640C /* SceneDelegate.swift */; };
-		A9BFAB2E2C194D340073640C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFAB2D2C194D340073640C /* ViewController.swift */; };
-		A9BFAB312C194D340073640C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9BFAB2F2C194D340073640C /* Main.storyboard */; };
+		A9BFAB312C194D340073640C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9BFAB2F2C194D340073640C /* Home.storyboard */; };
 		A9BFAB332C194D390073640C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9BFAB322C194D390073640C /* Assets.xcassets */; };
 		A9BFAB362C194D390073640C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9BFAB342C194D390073640C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		187F72D7779AFD80E38BFA49 /* Pods-Book Store.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Book Store.release.xcconfig"; path = "Target Support Files/Pods-Book Store/Pods-Book Store.release.xcconfig"; sourceTree = "<group>"; };
+		4584717DF348A980791B78EB /* Pods_Book_Store.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Book_Store.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E1485E62C35C5CA00D5FB70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8E1485E82C3656FF00D5FB70 /* objectMapper_for_json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = objectMapper_for_json.swift; sourceTree = "<group>"; };
+		8E26BEFF2C2D28400080C21E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		8E5BDF2C2C350AB800B476FA /* AllTIme_bestSeller_.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AllTIme_bestSeller_.json; sourceTree = "<group>"; };
+		8E86AAEF2C29706E00F0067F /* book description_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "book description_VC.swift"; sourceTree = "<group>"; };
+		8E86AAF22C2A8FB200F0067F /* AllBook_listing_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBook_listing_VC.swift; sourceTree = "<group>"; };
+		8E86AAF32C2A8FB200F0067F /* AllBook_listing_VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllBook_listing_VC.xib; sourceTree = "<group>"; };
+		8E86AAF82C2A932000F0067F /* AllBook_listing_Page_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBook_listing_Page_VC.swift; sourceTree = "<group>"; };
+		8E90E14C2C3BECCF0010DF02 /* CartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CartService.swift; path = ../../CartService.swift; sourceTree = "<group>"; };
 		A99AAF522C197D6D0046D9FC /* HomePage_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage_VC.swift; sourceTree = "<group>"; };
 		A99AAF552C1981CB0046D9FC /* Custom View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Custom View.swift"; sourceTree = "<group>"; };
 		A99AAF592C1999E40046D9FC /* HomeScreen_collectionView_cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen_collectionView_cell.swift; sourceTree = "<group>"; };
@@ -37,11 +57,11 @@
 		A9BFAB262C194D340073640C /* Book Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9BFAB292C194D340073640C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9BFAB2B2C194D340073640C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A9BFAB2D2C194D340073640C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A9BFAB302C194D340073640C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A9BFAB302C194D340073640C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		A9BFAB322C194D390073640C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9BFAB352C194D390073640C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9BFAB372C194D390073640C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4056D28B13DCAC8E6F4E140 /* Pods-Book Store.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Book Store.debug.xcconfig"; path = "Target Support Files/Pods-Book Store/Pods-Book Store.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,12 +69,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F097FF26F43CAC648B55703 /* Pods_Book_Store.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E1485E52C35BD7000D5FB70 /* view controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8E86AAF82C2A932000F0067F /* AllBook_listing_Page_VC.swift */,
+				8E86AAEF2C29706E00F0067F /* book description_VC.swift */,
+				8E90E14C2C3BECCF0010DF02 /* CartService.swift */,
+				A9A524AD2C1AD2D1007EA47A /* BookStorePage_vc.swift */,
+				A99AAF522C197D6D0046D9FC /* HomePage_VC.swift */,
+			);
+			path = "view controllers";
+			sourceTree = "<group>";
+		};
+		8E86AAF12C2A8EE700F0067F /* All book listing page */ = {
+			isa = PBXGroup;
+			children = (
+				8E86AAF22C2A8FB200F0067F /* AllBook_listing_VC.swift */,
+				8E86AAF32C2A8FB200F0067F /* AllBook_listing_VC.xib */,
+			);
+			path = "All book listing page";
+			sourceTree = "<group>";
+		};
 		A99AAF572C19820B0046D9FC /* Cutomization  */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +132,8 @@
 			children = (
 				A9BFAB282C194D340073640C /* Book Store */,
 				A9BFAB272C194D340073640C /* Products */,
+				C34AC7A10B2886FD4B0086BD /* Pods */,
+				E18B9535B505429B8588129D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,18 +148,38 @@
 		A9BFAB282C194D340073640C /* Book Store */ = {
 			isa = PBXGroup;
 			children = (
+				8E86AAF12C2A8EE700F0067F /* All book listing page */,
 				A99AAF572C19820B0046D9FC /* Cutomization  */,
 				A9BFAB292C194D340073640C /* AppDelegate.swift */,
 				A9BFAB2B2C194D340073640C /* SceneDelegate.swift */,
-				A9BFAB2D2C194D340073640C /* ViewController.swift */,
-				A9BFAB2F2C194D340073640C /* Main.storyboard */,
+				A9BFAB2F2C194D340073640C /* Home.storyboard */,
 				A9BFAB322C194D390073640C /* Assets.xcassets */,
 				A9BFAB342C194D390073640C /* LaunchScreen.storyboard */,
 				A9BFAB372C194D390073640C /* Info.plist */,
-				A99AAF522C197D6D0046D9FC /* HomePage_VC.swift */,
-				A9A524AD2C1AD2D1007EA47A /* BookStorePage_vc.swift */,
+				8E1485E52C35BD7000D5FB70 /* view controllers */,
+				8E26BEFF2C2D28400080C21E /* Model.swift */,
+				8E5BDF2C2C350AB800B476FA /* AllTIme_bestSeller_.json */,
+				8E1485E82C3656FF00D5FB70 /* objectMapper_for_json.swift */,
+				8E1485E62C35C5CA00D5FB70 /* GoogleService-Info.plist */,
 			);
 			path = "Book Store";
+			sourceTree = "<group>";
+		};
+		C34AC7A10B2886FD4B0086BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C4056D28B13DCAC8E6F4E140 /* Pods-Book Store.debug.xcconfig */,
+				187F72D7779AFD80E38BFA49 /* Pods-Book Store.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E18B9535B505429B8588129D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4584717DF348A980791B78EB /* Pods_Book_Store.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,15 +189,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9BFAB3A2C194D390073640C /* Build configuration list for PBXNativeTarget "Book Store" */;
 			buildPhases = (
+				7C2C81624D24AD47805BB1E3 /* [CP] Check Pods Manifest.lock */,
 				A9BFAB222C194D340073640C /* Sources */,
 				A9BFAB232C194D340073640C /* Frameworks */,
 				A9BFAB242C194D340073640C /* Resources */,
+				21AE9F7967B31F985A813393 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Book Store";
+			packageProductDependencies = (
+			);
 			productName = "Book Store";
 			productReference = A9BFAB262C194D340073640C /* Book Store.app */;
 			productType = "com.apple.product-type.application";
@@ -146,7 +214,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					A9BFAB252C194D340073640C = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -162,6 +230,9 @@
 				Base,
 			);
 			mainGroup = A9BFAB1D2C194D340073640C;
+			packageReferences = (
+				8EDD0C1B2C2EAF53009C4A2E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = A9BFAB272C194D340073640C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -177,24 +248,74 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9BFAB362C194D390073640C /* LaunchScreen.storyboard in Resources */,
+				8E1485E72C35C5CA00D5FB70 /* GoogleService-Info.plist in Resources */,
 				A99AAF5C2C1999E40046D9FC /* HomeScreen_collectionView_cell.xib in Resources */,
 				A9BFAB332C194D390073640C /* Assets.xcassets in Resources */,
-				A9BFAB312C194D340073640C /* Main.storyboard in Resources */,
+				A9BFAB312C194D340073640C /* Home.storyboard in Resources */,
 				A9B4B4F22C1C043C00342FAF /* BookType_coll_cell.xib in Resources */,
+				8E86AAF52C2A8FB200F0067F /* AllBook_listing_VC.xib in Resources */,
+				8E5BDF2D2C350AB800B476FA /* AllTIme_bestSeller_.json in Resources */,
 				A9A524AC2C1ACEC1007EA47A /* BookStore_featured_coll_cell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		21AE9F7967B31F985A813393 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Book Store/Pods-Book Store-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Book Store/Pods-Book Store-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Book Store/Pods-Book Store-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C2C81624D24AD47805BB1E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Book Store-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A9BFAB222C194D340073640C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9BFAB2E2C194D340073640C /* ViewController.swift in Sources */,
+				8E86AAF92C2A932000F0067F /* AllBook_listing_Page_VC.swift in Sources */,
+				8E1485E92C3656FF00D5FB70 /* objectMapper_for_json.swift in Sources */,
 				A9BFAB2A2C194D340073640C /* AppDelegate.swift in Sources */,
 				A99AAF532C197D6D0046D9FC /* HomePage_VC.swift in Sources */,
+				8E86AAF42C2A8FB200F0067F /* AllBook_listing_VC.swift in Sources */,
+				8E86AAF02C29706E00F0067F /* book description_VC.swift in Sources */,
+				8E26BF002C2D28400080C21E /* Model.swift in Sources */,
+				8E90E14D2C3BECCF0010DF02 /* CartService.swift in Sources */,
 				A9A524AB2C1ACEC1007EA47A /* BookStore_featured_coll_cell.swift in Sources */,
 				A99AAF5B2C1999E40046D9FC /* HomeScreen_collectionView_cell.swift in Sources */,
 				A99AAF562C1981CB0046D9FC /* Custom View.swift in Sources */,
@@ -207,12 +328,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A9BFAB2F2C194D340073640C /* Main.storyboard */ = {
+		A9BFAB2F2C194D340073640C /* Home.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A9BFAB302C194D340073640C /* Base */,
 			);
-			name = Main.storyboard;
+			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 		A9BFAB342C194D390073640C /* LaunchScreen.storyboard */ = {
@@ -262,6 +383,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -322,6 +444,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -342,6 +465,7 @@
 		};
 		A9BFAB3B2C194D390073640C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4056D28B13DCAC8E6F4E140 /* Pods-Book Store.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -351,9 +475,10 @@
 				INFOPLIST_FILE = "Book Store/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,14 +486,19 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ravindrasirvi.Book-Store";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		A9BFAB3C2C194D390073640C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 187F72D7779AFD80E38BFA49 /* Pods-Book Store.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -378,9 +508,10 @@
 				INFOPLIST_FILE = "Book Store/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -388,9 +519,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ravindrasirvi.Book-Store";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -416,6 +551,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8EDD0C1B2C2EAF53009C4A2E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.28.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = A9BFAB1E2C194D340073640C /* Project object */;
 }

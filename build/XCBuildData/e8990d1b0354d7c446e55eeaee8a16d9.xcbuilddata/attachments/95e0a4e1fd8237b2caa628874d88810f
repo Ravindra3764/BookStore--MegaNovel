@@ -1,0 +1,130 @@
+{
+  "" : {
+    "const-values" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/ObjectMapper-master.swiftconstvalues",
+    "dependencies" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/ObjectMapper-master.d",
+    "diagnostics" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/ObjectMapper-master.dia",
+    "emit-module-dependencies" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/ObjectMapper-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/ObjectMapper-master-emit-module.dia",
+    "swift-dependencies" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/ObjectMapper-master.swiftdeps"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/CodableTransform.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/CodableTransform.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/CodableTransform.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/CodableTransform.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/CustomDateFormatTransform.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/CustomDateFormatTransform.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/CustomDateFormatTransform.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/CustomDateFormatTransform.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/DataTransform.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/DataTransform.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/DataTransform.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/DataTransform.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/DateFormatterTransform.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/DateFormatterTransform.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/DateFormatterTransform.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/DateFormatterTransform.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/DateTransform.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/DateTransform.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/DateTransform.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/DateTransform.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/DictionaryTransform.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/DictionaryTransform.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/DictionaryTransform.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/DictionaryTransform.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/EnumOperators.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/EnumOperators.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/EnumOperators.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/EnumOperators.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/EnumTransform.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/EnumTransform.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/EnumTransform.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/EnumTransform.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/FromJSON.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/FromJSON.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/FromJSON.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/FromJSON.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/HexColorTransform.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/HexColorTransform.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/HexColorTransform.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/HexColorTransform.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/ImmutableMappable.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/ImmutableMappable.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/ImmutableMappable.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/ImmutableMappable.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/IntegerOperators.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/IntegerOperators.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/IntegerOperators.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/IntegerOperators.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/ISO8601DateTransform.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/ISO8601DateTransform.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/ISO8601DateTransform.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/ISO8601DateTransform.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/Map.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/Map.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/Map.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/Map.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/MapError.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/MapError.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/MapError.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/MapError.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/Mappable.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/Mappable.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/Mappable.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/Mappable.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/Mapper.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/Mapper.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/Mapper.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/Mapper.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/NSDecimalNumberTransform.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/NSDecimalNumberTransform.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/NSDecimalNumberTransform.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/NSDecimalNumberTransform.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/Operators.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/Operators.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/Operators.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/Operators.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/ToJSON.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/ToJSON.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/ToJSON.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/ToJSON.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/TransformOf.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/TransformOf.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/TransformOf.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/TransformOf.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/TransformOperators.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/TransformOperators.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/TransformOperators.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/TransformOperators.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/TransformType.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/TransformType.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/TransformType.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/TransformType.o"
+  },
+  "/Users/ravindrasirvi/Desktop/BookStore/Pods/ObjectMapper/Sources/URLTransform.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/URLTransform.o",
+    "llvm-bc" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/URLTransform.bc",
+    "object" : "/Users/ravindrasirvi/Desktop/BookStore/build/Pods.build/Release-iphoneos/ObjectMapper.build/Objects-normal/arm64/URLTransform.o"
+  }
+}

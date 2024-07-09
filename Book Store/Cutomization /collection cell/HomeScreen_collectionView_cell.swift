@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeScreen_collectionView_cell: UICollectionViewCell {
     
