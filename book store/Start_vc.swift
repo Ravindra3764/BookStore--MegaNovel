@@ -1,29 +1,16 @@
-//
-//  Start_vc.swift
-//  book store
-//
-//  Created by Apple 16 on 13/06/24.
-//
-
 import UIKit
 
 class Start_vc: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func act_btn(_ sender: UIButton) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Survey_vc") as! Survey_vc
+        self.navigationController?.pushViewController(vc, animated: true)
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
+    
 }
