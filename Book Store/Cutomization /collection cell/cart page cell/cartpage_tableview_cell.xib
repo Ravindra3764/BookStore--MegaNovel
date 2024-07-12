@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="133" id="KGk-i7-Jjw" customClass="cartpage_tableview_cell" customModule="book_store" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="497" height="133"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="497" height="133"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wX4-xT-g1a">
+                        <rect key="frame" x="0.0" y="0.0" width="497" height="133"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Book store Image label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX5-D4-3tz">
+                                <rect key="frame" x="122" y="10.000000000000002" width="200" height="22.666666666666671"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22.670000000000002" id="eB8-JM-pKr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemGray2Color"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Free Shipping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RyF-oH-FuX">
+                                <rect key="frame" x="130" y="40" width="83.666666666666686" height="16.666666666666671"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16.670000000000002" id="Krj-Jz-v6L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.1907475102" green="0.1662413529" blue="0.17923402390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="5xq-oF-ypS">
+                                <rect key="frame" x="14" y="5" width="78" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="118" id="BIs-ox-aWh"/>
+                                    <constraint firstAttribute="width" constant="78" id="ejC-ts-jZ5"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgM-qB-iZV">
+                                <rect key="frame" x="443" y="12.666666666666664" width="35" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="fl0-Lx-RZS"/>
+                                    <constraint firstAttribute="width" constant="35" id="mEr-Wa-oY3"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="top">
+                                    <imageReference key="image" image="xmark" catalog="system" symbolScale="medium"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$220" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1n-UA-5BA">
+                                <rect key="frame" x="130" y="76" width="47" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="NwN-bt-VqB"/>
+                                    <constraint firstAttribute="width" constant="47" id="qtE-Mv-zZU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemRedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="U1n-UA-5BA" firstAttribute="top" secondItem="RyF-oH-FuX" secondAttribute="bottom" constant="19.333333333333336" id="0R0-RN-Zmo"/>
+                            <constraint firstItem="RyF-oH-FuX" firstAttribute="top" secondItem="eX5-D4-3tz" secondAttribute="bottom" constant="7.3333333333333286" id="3Kc-hs-ENw"/>
+                            <constraint firstItem="5xq-oF-ypS" firstAttribute="top" secondItem="wX4-xT-g1a" secondAttribute="top" constant="5" id="Jgt-RO-fh6"/>
+                            <constraint firstItem="eX5-D4-3tz" firstAttribute="bottom" secondItem="UgM-qB-iZV" secondAttribute="bottom" id="cyg-j9-gel"/>
+                            <constraint firstItem="eX5-D4-3tz" firstAttribute="top" secondItem="wX4-xT-g1a" secondAttribute="top" constant="10" id="klZ-dv-ZQ3"/>
+                            <constraint firstItem="eX5-D4-3tz" firstAttribute="leading" secondItem="5xq-oF-ypS" secondAttribute="trailing" constant="30" id="l4j-tz-ZMD"/>
+                            <constraint firstItem="U1n-UA-5BA" firstAttribute="leading" secondItem="5xq-oF-ypS" secondAttribute="trailing" constant="38" id="lHe-cP-zF4"/>
+                            <constraint firstAttribute="trailing" secondItem="UgM-qB-iZV" secondAttribute="trailing" constant="19" id="lin-Ks-Adn"/>
+                            <constraint firstItem="RyF-oH-FuX" firstAttribute="leading" secondItem="5xq-oF-ypS" secondAttribute="trailing" constant="38" id="pXr-Be-AET"/>
+                            <constraint firstItem="5xq-oF-ypS" firstAttribute="leading" secondItem="wX4-xT-g1a" secondAttribute="leading" constant="14" id="qns-cm-8Lf"/>
+                            <constraint firstAttribute="bottom" secondItem="5xq-oF-ypS" secondAttribute="bottom" constant="10" id="rEg-FZ-tmb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="wX4-xT-g1a" secondAttribute="bottom" id="1Fn-d0-rxb"/>
+                    <constraint firstItem="wX4-xT-g1a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="N9I-r8-Iaz"/>
+                    <constraint firstItem="wX4-xT-g1a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="bwk-mp-eHZ"/>
+                    <constraint firstAttribute="trailing" secondItem="wX4-xT-g1a" secondAttribute="trailing" id="vVl-49-k33"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="ShippingstatusLabel" destination="RyF-oH-FuX" id="rhK-7w-eRi"/>
+                <outlet property="deleteButton" destination="UgM-qB-iZV" id="Xq6-Js-CyD"/>
+                <outlet property="productimage" destination="5xq-oF-ypS" id="xyX-tZ-WK0"/>
+                <outlet property="productname" destination="eX5-D4-3tz" id="7QX-oS-DzD"/>
+                <outlet property="productpricelabel" destination="U1n-UA-5BA" id="QZe-O2-Agx"/>
+            </connections>
+            <point key="canvasLocation" x="536.64122137404581" y="6.6901408450704229"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="image1" width="287" height="445"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="scrollViewTexturedBackgroundColor">
+            <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
