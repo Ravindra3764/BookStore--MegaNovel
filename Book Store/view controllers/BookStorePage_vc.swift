@@ -27,18 +27,31 @@ class BookStorePage_vc: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.bookDic = DataManager.shared.getBooks()
+//        self.bookDic = DataManager.shared.getBooks()
 
         self.BookStore_featured_coll_view.register(UINib(nibName: "BookStore_featured_coll_cell", bundle: nil), forCellWithReuseIdentifier: "BookStore_featured_coll_cell")
-        self.BookStore_featured_coll_view.reloadData()
-        
+ 
         self.BookStore_booktype_coll_view.register(UINib(nibName: "BookType_coll_cell", bundle: nil), forCellWithReuseIdentifier: "BookType_coll_cell")
-        self.BookStore_booktype_coll_view.reloadData()
-        
+ 
         self.bookStore_kidsyoung_coll_view.register(UINib(nibName: "BookType_coll_cell", bundle: nil), forCellWithReuseIdentifier: "BookType_coll_cell")
-        self.bookStore_kidsyoung_coll_view.reloadData()
         
+        fetchBooks()
+ 
 //        self.bookStore_nonFictional_coll_View.register(UINib(nibName: "BookType_coll_cell", bundle: nil), forCellWithReuseIdentifier: "BookType_coll_cell")
+    }
+    
+    func fetchBooks(){
+        
+        DataManager.shared.fetchBooks { books, error in
+            if let error = error{
+                print("Error in fetching data:", error.localizedDescription)
+                return
+            }
+            self.bookDic = books ?? []
+            self.BookStore_featured_coll_view.reloadData()
+            self.BookStore_booktype_coll_view.reloadData()
+            self.bookStore_kidsyoung_coll_view.reloadData()
+        }
     }
     
  

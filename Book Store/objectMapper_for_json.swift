@@ -20,8 +20,19 @@ struct BookData: Mappable {
    var price: Double = 0.0
    var description: String = ""
    var bookImage: String = ""
+    var bookContent: String = ""
 
    init?(map: Map) {}
+    
+    init(bookId: String, bookName: String, authorName: String, price: Double, description: String, bookImage: String, bookContent: String) {
+            self.bookId = bookId
+            self.bookName = bookName
+            self.authorName = authorName
+            self.price = price
+            self.description = description
+            self.bookImage = bookImage
+            self.bookContent = bookContent
+        }
 
    mutating func mapping(map: Map) {
        bookId <- map["Book_Id"]
@@ -30,171 +41,25 @@ struct BookData: Mappable {
        price <- map["Price"]
        description <- map["Description"]
        bookImage <- map["Book_Image"]/*, URLTransform())*/
+       bookContent <- map["Book_Content"]
    }
 
 }
+class CartItem: Codable {
+    var id: String
+    var title: String
+    var author: String
+    var price: Double
+    var description: String
+    var imageUrl: String
 
-
-class DataManager{
-   
-   static let shared = DataManager()
-   var books: Books?
-   
-   
-   private init(){
-       loaddata()
-   }
-   
-
-   
-   func getBooks() -> [BookData]{
-       return books?.books ?? []
-   }
-   
-   func getBook(byID bookId: String) ->BookData?{
-       
-       return books?.books?.first {$0.bookId == bookId}
-   }
-}
-
-
-
-extension DataManager{
-    private func loaddata(){
-        
-        let jsonString = """
-        
-        {
-          "books": [
-            {
-              "Book_Id": "001",
-              "Book_Name": "To Kill a Mockingbird",
-              "Author_Name": "Harper Lee",
-              "Price": 15.99,
-              "Description": "Harper Lee's novel 'To Kill a Mockingbird' is set in the fictional town of Maycomb, Alabama, during the 1930s. The story is narrated by Scout Finch, a young girl who, along with her brother Jem and their friend Dill, becomes intrigued by their reclusive neighbor Boo Radley. Amidst their adventures, their father, Atticus Finch, a lawyer, is appointed to defend Tom Robinson, a black man falsely accused of raping a white woman, Mayella Ewell. The trial becomes a focal point for the town's racial tensions and prejudices. Atticus's principled defense challenges the deeply ingrained racism in Maycomb and teaches Scout and Jem about morality, empathy, and the injustice of prejudice. Throughout the novel, Lee explores profound themes such as racial inequality, moral growth, and the loss of innocence. The title of the novel symbolizes Atticus's belief that it is a sin to destroy innocence, likening mockingbirds to those who are unjustly harmed or oppressed. 'To Kill a Mockingbird' is celebrated for its powerful portrayal of social issues and its timeless lessons on compassion and integrity. Lee's evocative prose and memorable characters, including the iconic Atticus Finch, continue to resonate with readers, making it a classic of American literature.",
-              "Book_Image": "https://m.media-amazon.com/images/I/81gepf1eMqL.jpg"
-            },
-            {
-              "Book_Id": "002",
-              "Book_Name": "1984",
-              "Author_Name": "George Orwell",
-              "Price": 12.49,
-              "Description": "George Orwell's dystopian novel '1984' depicts a totalitarian society dominated by the Party and its leader, Big Brother. Set in Oceania, Winston Smith, a Party member, rebels against the oppressive regime. Working at the Ministry of Truth, he alters historical records to fit Party propaganda while secretly harboring thoughts of defiance. Winston begins an illicit love affair with Julia, challenging the Party's strict regulations on personal relationships and thoughts. Orwell explores themes of surveillance, propaganda, and the manipulation of truth through the Party's use of technology and Newspeak, a language designed to eliminate rebellious thoughts. As Winston delves deeper into resistance, he becomes a target of the Party's Thought Police. Betrayed by O'Brien, whom he trusted as a fellow dissenter, Winston undergoes brutal reeducation in Room 101, facing his deepest fears. Ultimately, he betrays Julia, symbolizing the Party's complete psychological control. '1984' serves as a cautionary tale against totalitarianism and the erosion of personal freedom, resonating with its portrayal of the fragility of truth and the human spirit in the face of oppressive regimes.",
-              "Book_Image": "https://images-na.ssl-images-amazon.com/images/I/71kxa1-0mfL.jpg"
-            },
-            {
-              "Book_Id": "003",
-              "Book_Name": "The Catcher in the Rye",
-              "Author_Name": "J.D. Salinger",
-              "Price": 10.99,
-              "Description": "J.D. Salinger's novel 'The Catcher in the Rye' follows the experiences of Holden Caulfield, a disenchanted teenager navigating the complexities of adolescence and adulthood in post-World War II America. After being expelled from an elite boarding school, Holden decides to leave early and embarks on a journey through New York City. Throughout the novel, Holden wrestles with feelings of alienation, cynicism towards societal norms, and a longing for authenticity in a world he perceives as phony. As he encounters various characters and situations, including his younger sister Phoebe whom he adores, Holden grapples with the loss of innocence and the challenges of growing up. His narrative is marked by a distinctive voice, characterized by colloquial language and candid observations about life's absurdities. 'The Catcher in the Rye' explores themes of identity, rebellion, mental health, and the search for meaning amidst disillusionment. Holden's desire to protect the innocence of children, symbolized by his fantasy of being the 'catcher in the rye' who saves them from falling into the corrupt adult world, underscores his yearning for purity and authenticity in an increasingly complex world. Salinger's novel remains a seminal work in American literature, acclaimed for its portrayal of adolescent angst and its enduring resonance with readers of all ages.",
-              "Book_Image": "https://images-na.ssl-images-amazon.com/images/I/81OthjkJBuL.jpg"
-            },
-            {
-              "Book_Id": "004",
-              "Book_Name": "Pride and Prejudice",
-              "Author_Name": "Jane Austen",
-              "Price": 9.99,
-              "Description": "Jane Austen's novel 'Pride and Prejudice' is a classic of English literature, known for its wit, social commentary, and memorable characters. Set in rural England during the Regency era, the story revolves around the Bennet family, particularly the spirited Elizabeth Bennet. Mrs. Bennet is determined to marry off her five daughters to wealthy suitors, which sets the stage for numerous romantic entanglements and misunderstandings. The wealthy and aloof Mr. Fitzwilliam Darcy initially clashes with Elizabeth due to his perceived arrogance, while she forms a negative opinion of him based on his reserved demeanor. As the novel progresses, both characters confront their own prejudices and misconceptions, leading to personal growth and a deeper understanding of each other. Austen skillfully weaves together themes of love, marriage, social class, and morality, offering sharp insights into the constraints faced by women and the importance of personal integrity. The novel's enduring appeal lies in its vivid portrayal of Georgian society and its exploration of timeless themes that resonate with readers across generations. 'Pride and Prejudice' is celebrated for its sparkling dialogue, subtle humor, and the timeless romance between Elizabeth Bennet and Mr. Darcy, which continues to captivate readers worldwide.",
-              "Book_Image": "https://m.media-amazon.com/images/I/81h36FJn2JL._SY522_.jpg"
-            },
-            {
-              "Book_Id": "005",
-              "Book_Name": "The Great Gatsby",
-              "Author_Name": "F. Scott Fitzgerald",
-              "Price": 11.25,
-              "Description": "F. Scott Fitzgerald's novel 'The Great Gatsby' is a poignant exploration of the American Dream set in the roaring 1920s. The story is narrated by Nick Carraway, a young man who moves to Long Island and becomes entangled in the lives of his wealthy and enigmatic neighbor, Jay Gatsby, and his cousin Daisy Buchanan. Gatsby is known for his lavish parties and mysterious background, but his true motivation is to win back Daisy, his lost love from the past. As Nick delves deeper into Gatsby's world of excess and illusion, he uncovers the tragic consequences of Gatsby's relentless pursuit of wealth and status. Fitzgerald paints a vivid portrait of the Jazz Age, depicting the opulence and moral decay of the era through vivid descriptions and symbolic imagery. Themes of love, ambition, social class, and the illusion of the American Dream permeate the novel. The characters, including the cynical Tom Buchanan and the idealistic Jordan Baker, reflect the contradictions and disillusionment of their time. 'The Great Gatsby' is celebrated for its lyrical prose, intricate narrative structure, and exploration of the complexities of human desire and identity. Fitzgerald's critique of the American Dream, juxtaposed with the allure of wealth and social status, resonates with readers as a timeless commentary on the pursuit of happiness and the emptiness of materialism.",
-              "Book_Image": "https://m.media-amazon.com/images/I/81QuEGw8VPL._SY522_.jpg"
-            },
-            {
-              "Book_Id": "006",
-              "Book_Name": "Moby-Dick",
-              "Author_Name": "Herman Melville",
-              "Price": 14.99,
-              "Description": "Herman Melville's novel 'Moby-Dick' is an epic tale of obsession and revenge set against the backdrop of 19th-century whaling. The story is narrated by Ishmael, a sailor who joins the crew of the whaling ship Pequod, commanded by the enigmatic Captain Ahab. Ahab is consumed by his single-minded quest for vengeance against Moby Dick, a massive white whale that had previously maimed him by biting off his leg at the knee. As the Pequod sails across the world's oceans in pursuit of the elusive whale, Ishmael reflects on the diverse crew members, the art of whaling, and profound philosophical musings. The novel delves into themes of fate, free will, madness, and the nature of evil. Melville weaves together adventure, symbolism, and literary complexity, using Ishmael's narrative to explore the depths of human nature and the inexorable forces that drive individuals to their doom. 'Moby-Dick' is renowned for its rich symbolism, including the white whale as a symbol of both nature's power and the unknowable mysteries of existence. Melville's prose combines vivid descriptions of the sea and its creatures with philosophical digressions that challenge readers to contemplate the meaning of life and death. 'Moby-Dick' stands as a monumental work of American literature, praised for its literary innovation and profound exploration of human experience.",
-              "Book_Image": "https://m.media-amazon.com/images/I/71hoT+tt7CL._SY522_.jpg"
-            },
-            {
-              "Book_Id": "007",
-              "Book_Name": "The Hobbit",
-              "Author_Name": "J.R.R. Tolkien",
-              "Price": 8.99,
-              "Description": "J.R.R. Tolkien's novel 'The Hobbit' follows the adventure of Bilbo Baggins, a hobbit who is reluctantly swept into a quest to reclaim the lost Dwarf Kingdom of Erebor from the fearsome dragon Smaug. Gandalf the wizard chooses Bilbo as the 'burglar' for a company of thirteen dwarves led by Thorin Oakenshield. Together, they traverse Middle-earth, encountering trolls, goblins, elves, and other fantastical creatures. Bilbo's journey takes him through dark forests, treacherous mountains, and mysterious lands, testing his courage and resourcefulness. Along the way, he discovers a magical ring that grants him invisibility, a precursor to the One Ring of 'The Lord of the Rings'. As Bilbo and the dwarves face challenges and setbacks, they forge alliances and confront their own fears and ambitions. Tolkien's narrative blends adventure with themes of heroism, friendship, and the allure of treasure. 'The Hobbit' serves as a prelude to Tolkien's epic saga, 'The Lord of the Rings', introducing readers to the richly imagined world of Middle-earth and its inhabitants. The novel's light-hearted tone and whimsical storytelling appeal to readers of all ages, capturing the essence of classic fantasy literature. Bilbo's growth from a timid hobbit into a brave adventurer echoes timeless themes of self-discovery and the transformative power of unexpected journeys.",
-              "Book_Image": "https://m.media-amazon.com/images/I/712cDO7d73L._SY522_.jpg"
-            },
-            {
-              "Book_Id": "008",
-              "Book_Name": "The Da Vinci Code",
-              "Author_Name": "Dan Brown",
-              "Price": 9.75,
-              "Description": "Dan Brown's thriller 'The Da Vinci Code' centers on symbologist Robert Langdon, who is drawn into a complex mystery after a murder at the Louvre Museum in Paris. The victim, Jacques Saunière, leaves cryptic clues that lead Langdon and French cryptologist Sophie Neveu on a quest to uncover secrets hidden within famous artworks, particularly those of Leonardo da Vinci. As they unravel codes and symbols, they discover a centuries-old conspiracy involving a secret society, the Priory of Sion, and its protection of a controversial historical truth: the supposed marriage of Jesus Christ and Mary Magdalene. Pursued by both the police and a murderous albino monk, Langdon and Sophie race against time across Europe, piecing together clues that challenge established religious beliefs and threaten powerful institutions. Brown weaves a narrative that blends historical intrigue with thrilling suspense, exploring themes of faith, knowledge, and the quest for truth. 'The Da Vinci Code' explores the intersection of art, religion, and history, presenting provocative theories about hidden meanings in art and the potential implications for Christianity. The novel's fast-paced plot and intricate puzzles captivate readers, while its exploration of symbology and religious symbolism sparks debate and controversy. Brown's storytelling skillfully combines suspenseful action with thought-provoking insights, making 'The Da Vinci Code' a global phenomenon that challenges readers to question conventional wisdom and explore the mysteries of human history.",
-              "Book_Image": "https://m.media-amazon.com/images/I/511Fmf0fYXL._SY445_SX342_.jpg"
-            },
-            {
-              "Book_Id": "009",
-              "Book_Name": "The Lord of the Rings",
-              "Author_Name": "J.R.R. Tolkien",
-              "Price": 20.00,
-              "Description": "J.R.R. Tolkien's epic fantasy novel 'The Lord of the Rings' follows the quest to destroy the One Ring, a powerful artifact created by the Dark Lord Sauron to dominate Middle-earth. The story begins with Frodo Baggins, a hobbit from the Shire, inheriting the Ring and embarking on a perilous journey to Mount Doom, where it can be destroyed. Accompanied by his loyal friends — Samwise Gamgee, Merry, and Pippin — Frodo faces numerous challenges and encounters a diverse cast of characters, including the wizard Gandalf, Aragorn the ranger, Legolas the elf, Gimli the dwarf, and others who aid or hinder their quest. As they traverse Middle-earth, they confront evil forces, such as Sauron's servants and the corrupted Saruman, while alliances form among the free peoples against the growing darkness. Tolkien's narrative delves into themes of heroism, sacrifice, friendship, and the struggle between good and evil. The journey tests each character's resolve and loyalty, revealing their inner strengths and vulnerabilities. 'The Lord of the Rings' culminates in a climactic battle for the fate of Middle-earth, where the choices of individuals shape the course of history. Tolkien's richly imagined world, complete with languages, histories, and cultures, captivates readers with its depth and complexity. The novel's enduring appeal lies in its timeless themes of courage, perseverance, and the enduring power of hope in the face of darkness.",
-              "Book_Image": "https://m.media-amazon.com/images/I/71zMR98Iu1L._SY522_.jpg"
-            },
-            {
-              "Book_Id": "010",
-              "Book_Name": "Harry Potter and the Philosopher's Stone",
-              "Author_Name": "J.K. Rowling",
-              "Price": 12.99,
-              "Description": "J.K. Rowling's novel 'Harry Potter and the Philosopher's Stone' introduces readers to the magical world of Hogwarts School of Witchcraft and Wizardry. The story follows Harry Potter, an orphaned boy who discovers he is a wizard on his eleventh birthday. He is invited to attend Hogwarts, where he learns about his parents' legacy, the wizarding community, and his role in defeating the dark wizard Lord Voldemort. Alongside his friends Hermione Granger and Ron Weasley, Harry navigates the challenges of school life, magical lessons, and the mysteries surrounding the Philosopher's Stone, a legendary substance that grants immortality. As Harry delves into the secrets of Hogwarts, he uncovers truths about his past and faces adversaries that threaten the wizarding world's peace. Rowling weaves a tale of friendship, courage, and the power of love, blending magical adventures with themes of identity and destiny. 'Harry Potter and the Philosopher's Stone' captivates readers with its whimsical charm, memorable characters, and intricate world-building. The novel's exploration of good versus evil resonates through its depiction of bravery in the face of adversity and the importance of choosing one's path. It marks the beginning of Harry's journey as a hero destined to confront dark forces and protect the magic that binds the wizarding world.",
-              "Book_Image": "https://m.media-amazon.com/images/I/51dOacmuzvL._SY445_SX342_.jpg"
-            },
-            {
-              "Book_Id": "011",
-              "Book_Name": "The Hunger Games",
-              "Author_Name": "Suzanne Collins",
-              "Price": 11.49,
-              "Description": "Suzanne Collins' novel 'The Hunger Games' is set in a dystopian future where the Capitol, a wealthy and oppressive city, rules over twelve impoverished districts. Every year, as punishment for past rebellion, the Capitol selects one boy and one girl from each district to compete in a televised event called the Hunger Games, a brutal fight to the death. The story follows Katniss Everdeen, a resourceful young woman from District 12, who volunteers to take her sister's place in the Games. Alongside her fellow tribute, Peeta Mellark, Katniss navigates the deadly arena while facing moral dilemmas and questioning the Capitol's control. As the Games progress, Katniss becomes a symbol of resistance against the oppressive regime, sparking a rebellion across the districts. Collins explores themes of survival, sacrifice, and the consequences of unchecked power. Through Katniss' perspective, the narrative examines the complexities of loyalty, love, and identity in a society divided by wealth and privilege. 'The Hunger Games' is a gripping tale of courage and resilience, blending action-packed sequences with social commentary on inequality and authoritarianism. The novel's exploration of human nature and the struggle for justice resonates with readers for its powerful portrayal of defiance and hope in the face of oppression.",
-              "Book_Image": "https://m.media-amazon.com/images/I/61I24wOsn8L._SY522_.jpg"
-            },
-            {
-              "Book_Id": "012",
-              "Book_Name": "Brave New World",
-              "Author_Name": "Aldous Huxley",
-              "Price": 13.50,
-              "Description": "Aldous Huxley's novel 'Brave New World' presents a dystopian future where society is controlled by technology, genetic engineering, and a rigid caste system. Set in a World State governed by stability and happiness, citizens are conditioned from birth to conform to their assigned roles. The story follows Bernard Marx, an Alpha-Plus intellectual who questions societal norms, and Lenina Crowne, a Beta destined for conformity. Their encounter with John, a 'savage' from a reservation where old human values still prevail, challenges their beliefs and exposes the dark underbelly of their controlled world. Huxley explores themes of individuality, freedom, and the dehumanizing effects of technology and consumerism. In the World State, happiness is achieved through the drug soma and the suppression of emotions and critical thinking. The novel critiques the dangers of totalitarianism and explores the conflict between individuality and societal control. As John grapples with the clash between his upbringing and the superficial utopia of the World State, the narrative questions the price of conformity and the loss of humanity in pursuit of stability. 'Brave New World' remains a cautionary tale about the risks of sacrificing personal liberty for societal harmony, resonating with its portrayal of a future shaped by scientific progress and social engineering.",
-              "Book_Image": "https://m.media-amazon.com/images/I/91D4YvdC0dL._SY522_.jpg"
-            },
-            {
-              "Book_Id": "013",
-              "Book_Name": "Frankenstein",
-              "Author_Name": "Mary Shelley",
-              "Price": 9.99,
-              "Description": "Mary Shelley's novel 'Frankenstein' explores themes of creation, ambition, and the consequences of playing god. The story follows Victor Frankenstein, a young scientist who becomes obsessed with the idea of creating life. Using unconventional methods, Victor successfully brings to life a grotesque creature assembled from stolen body parts. Horrified by his creation's appearance, Victor rejects the creature, leading it to seek revenge. The creature's journey unfolds as it grapples with its own existence, yearning for acceptance and understanding from its creator and society. The novel delves into the complexities of identity, morality, and the pursuit of knowledge, highlighting the dangers of unchecked scientific ambition. Through multiple narrators, including Victor and the creature itself, Shelley weaves a narrative that questions the ethics of creation and the responsibilities that accompany it. 'Frankenstein' is a seminal work of Gothic literature, blending elements of horror, science fiction, and philosophical inquiry. It explores the darker aspects of human nature and society's treatment of the Other, resonating with readers for its profound themes and enduring relevance.",
-              "Book_Image": "https://m.media-amazon.com/images/I/71hCBEMpQ0L._SY522_.jpg"
-            },
-            {
-              "Book_Id": "014",
-              "Book_Name": "The Road",
-              "Author_Name": "Cormac McCarthy",
-              "Price": 11.99,
-              "Description": "Cormac McCarthy's novel 'The Road' tells the story of a father and son's journey through a post-apocalyptic landscape. Set in a bleak, ashen world devastated by an unspecified catastrophe, the novel follows the duo as they travel southward in search of warmth and safety. The father and son struggle to survive amid scarcity, harsh weather, and the constant threat of starvation and roving gangs of cannibals. Their bond is tested as they confront the moral dilemmas of survival, including whether to help strangers or prioritize their own safety. Throughout their journey, the father imparts lessons of survival, courage, and compassion to his young son, instilling in him a sense of hope and humanity amidst the despair. The novel explores themes of resilience, love, and the human spirit's capacity for goodness in the face of unimaginable adversity. 'The Road' is a haunting and introspective exploration of survival and the enduring bond between parent and child, resonating with readers for its raw emotional power and existential reflections.",
-              "Book_Image": "https://m.media-amazon.com/images/I/51M7XGLQTBL._SY522_.jpg"
-            },
-            {
-              "Book_Id": "015",
-              "Book_Name": "The Alchemist",
-              "Author_Name": "Paulo Coelho",
-              "Price": 10.25,
-              "Description": "Paulo Coelho's novel 'The Alchemist' follows Santiago, a shepherd boy, on a transformative journey to find his Personal Legend. Santiago dreams of a treasure hidden near the Egyptian pyramids, leading him to leave his familiar life in Spain. Along the way, he encounters various mentors, including Melchizedek, the King of Salem, who teaches him about following his dreams and the language of omens. Santiago also falls in love with Fatima, a desert woman, but continues his quest driven by the belief that pursuing one's dreams is essential to fulfillment. Throughout his journey, Santiago faces numerous challenges and setbacks, including betrayal and the fear of failure. These obstacles force him to confront his doubts and fears, ultimately leading him to discover that the treasure he seeks is not merely material wealth but a deeper understanding of oneself and the universe. 'The Alchemist' is a philosophical tale about the importance of listening to one's heart, pursuing one's dreams, and finding meaning in life's journey. Coelho's narrative blends elements of mysticism, spirituality, and adventure, resonating with readers for its timeless wisdom and universal themes.",
-              "Book_Image": "https://m.media-amazon.com/images/I/61HAE8zahLL._SY522_.jpg"
-            }
-          ]
-        }
-
- """
-        
-        books = Books(JSONString: jsonString)
-    
-
+    init(id: String, title: String, author: String, price: Double, description: String, imageUrl: String) {
+        self.id = id
+        self.title = title
+        self.author = author
+        self.price = price
+        self.description = description
+        self.imageUrl = imageUrl
     }
-    
-    
 }
+ 

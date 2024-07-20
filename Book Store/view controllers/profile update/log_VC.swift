@@ -24,14 +24,17 @@ class log_VC: UIViewController {
       
     
     }
-    /*
-    // MARK: - Navigation
+    
+    
+    @IBAction func Logout_button(_ sender: UIButton) {
+        
+        UserDefaults.standard.removeObject(forKey: "User_id")
+        if let frontPageVC = storyboard?.instantiateViewController(withIdentifier: "front_vc") as? front_vc {
+            
+            self.navigationController?.pushViewController(frontPageVC, animated: true)
+         }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

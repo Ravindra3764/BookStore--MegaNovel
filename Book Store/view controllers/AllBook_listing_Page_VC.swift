@@ -18,10 +18,8 @@ class AllBook_listing_Page_VC: UIViewController {
 
         self.Book_list_Page_scrlView.register(UINib(nibName: "AllBook_listing_VC", bundle: nil), forCellWithReuseIdentifier: "AllBook_listing_VC")
         
-        self.bookDic = DataManager.shared.getBooks()
-        self.Book_list_Page_scrlView.reloadData()
-             self.shuffleAndReloadData()
-    }
+             fetchBooks()
+         }
     
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
@@ -32,8 +30,23 @@ class AllBook_listing_Page_VC: UIViewController {
             self.bookDic.shuffle()
             self.Book_list_Page_scrlView.reloadData()
         }
+    private func fetchBooks() {
+    DataManager.shared.fetchBooks { [weak self] (books, error) in
+        guard let self = self else { return }
 
+        if let error = error {
+            print("Error fetching books: \(error)")
+            return
+        }
+
+        self.bookDic = books ?? []
+        self.shuffleAndReloadData()
+    }
 }
+}
+
+
+
 extension AllBook_listing_Page_VC : UICollectionViewDataSource , UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -66,11 +79,11 @@ extension AllBook_listing_Page_VC : UICollectionViewDataSource , UICollectionVie
         
         let selectedBook = bookDic[indexPath.row]
  
-        let bookDescriptionVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "book_description_VC") as! book_description_VC
-        bookDescriptionVC.book = selectedBook
+        let pdfReaderVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "book_description_VC") as! book_description_VC
+        pdfReaderVC.book = selectedBook
         
         
-        self.present(bookDescriptionVC, animated:  true, completion: nil)
+        self.present(pdfReaderVC, animated:  true, completion: nil)
     }
     
     

@@ -6,24 +6,29 @@
 //
 
 import UIKit
+import WebKit
 
 class PDF_Reader_VC: UIViewController {
+    var book: BookData?
 
+    @IBOutlet weak var PDFReader_content_loader: WKWebView!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        showProgressBar()
+        if let book = book, let url = URL(string: book.bookContent) {
+                    print("content link:",url)
+                    let urlRequest = URLRequest(url: url)
+                    PDFReader_content_loader.load(urlRequest)
+                }
 
-        // Do any additional setup after loading the view.
-    }
+            hideProgressBar()
+        
+     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+   
+    @IBAction func Pdf_reader_cancel_btn(_ sender: UIButton) {
+//        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true)
     }
-    */
-
 }

@@ -6,10 +6,12 @@ target 'Book Store' do
   use_frameworks!
 
   # Pods for Book Store
-  pod 'ObjectMapper'
+pod 'ObjectMapper'
 pod 'FirebaseAuth'	
-pod 'FirebaseFirestore'	
+pod 'FirebaseFirestore'
 pod 'FirebaseStorage'	
-  pod 'Kingfisher'
+pod 'Kingfisher'
+pod 'IQKeyboardManager'
+pod 'MBProgressHUD'
 
 end

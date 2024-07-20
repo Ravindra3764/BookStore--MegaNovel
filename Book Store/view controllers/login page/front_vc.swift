@@ -20,7 +20,7 @@ class front_vc: UIViewController {
     
   
     @IBAction func act_login(_ sender: Any) {
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let storyboard = UIStoryboard(name: "Home", bundle: nil)
     let vc = storyboard.instantiateViewController(withIdentifier: "login_vc") as! login_vc
         self.navigationController?.pushViewController(vc, animated: true)
         
@@ -31,7 +31,7 @@ class front_vc: UIViewController {
     @IBAction func act_create(_ sender: UIButton) {
     
     
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "Create_vc") as! Create_vc
         self.navigationController?.pushViewController(vc, animated: true)
         

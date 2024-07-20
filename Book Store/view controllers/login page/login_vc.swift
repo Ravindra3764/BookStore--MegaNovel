@@ -1,9 +1,3 @@
-//
-//  login_vc.swift
-//  book store
-//
-//  Created by Apple 16 on 13/06/24.
-//
 
 import UIKit
 import FirebaseAuth
@@ -20,56 +14,43 @@ class login_vc: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    
+  
+     }
     @IBAction func act_signup(_ sender: UIButton) {
-        let email = self.TF_email.text!
-                   let password = self.TF_password.text!
-                   
+         let email = self.TF_email.text!
+        let password = self.TF_password.text!
                if email.isEmpty || password.isEmpty {
-                   showAlert(title:"Error", message: "Please enter both email & password.")
+                   showAlert(title: "Error",message: "Please enter both email & password.")
                            return
                        }
-                    showAlert( title:"Error",message: "invalid email and password")
-                       Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
-                           if let error = error {
-                              
-                              // print("Error logging in: \(error.localizedDescription)")
-                             //  self.showAlert(message: "Error logging in. Please check your credentials and try again.")
-                               return
+                        showProgressBar()
+                        Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
+                            guard let uid = authResult?.user.uid else {return }
+                            if let error = error {
+                                
+                                
+                                self.hideProgressBar()
+                               print("Error logging in: \(error.localizedDescription)")
+                                self.showAlert(title: "Error", message: "Invalid Email or credentials")
+                                 return
                            }
+                            self.hideProgressBar()
 
                            // User successfully logged in
                            print("Login successful!")
-                           // Example: Navigate to another view controller upon successful login
-                           // self.performSegue(withIdentifier: "LoggedInSegue", sender: nil)
+                           
+                           let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                           let vc = storyboard.instantiateViewController(withIdentifier: "navigate_home") as! UINavigationController
+                           self.present(vc, animated: true)
 
                            // Optionally save user email to UserDefaults
-                           UserDefaults.standard.setValue(email, forKey: "email")
+                           UserDefaults.standard.setValue(uid, forKey: "User_id")
+                           print(UserDefaults.standard.string(forKey: "User_id") ?? "not fetched")
                            
                        }
-                  
-                   // let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                  //  let vc = storyboard.instantiateViewController(withIdentifier: "Start_vc") as! Start_vc
-                   // self.navigationController?.pushViewController(vc, animated: true)
-                   }
-         
-     
-         
+     }
+      
            }
-           
-func showAlert(title: String, message: String) {
-    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-    // self.present(alert, animated: true, completion: nil)
-}
-
-           
-
        extension UIViewController {
            
            var result: String? {

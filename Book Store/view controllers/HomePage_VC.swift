@@ -7,50 +7,85 @@
 
 import UIKit
 import Kingfisher
+import FirebaseFirestore
+ 
 class HomePage_VC: UIViewController {
-
+    
     @IBOutlet weak var Homescrn_FictionandLit_img: UIImageView!
     
     @IBOutlet weak var HomeScrn_NonFictional_img: UIImageView!
     @IBOutlet weak var Homescreen_scrlView_allTimeBestSeller: UICollectionView!
     
-     var bookDic : [BookData] = []
+    var bookDic : [BookData] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.Homescreen_scrlView_allTimeBestSeller.register(UINib(nibName:"HomeScreen_collectionView_cell", bundle: nil), forCellWithReuseIdentifier: "HomeScreen_collectionView_cell")
-    
-        self.bookDic = DataManager.shared.getBooks()
+            fetchBooks()
+//        self.bookDic = DataManager.shared.getBooks()
         self.Homescreen_scrlView_allTimeBestSeller.reloadData()
         
-       
- 
         
+//        self.uploadDataToFirebase()
+//        
         
         // here "UITapGestureRecognizer" method is used for make images clickcable
         
         let fictionTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(fictionImageTapped))
-               Homescrn_FictionandLit_img.isUserInteractionEnabled = true
-               Homescrn_FictionandLit_img.addGestureRecognizer(fictionTapGestureRecognizer)
-
+        Homescrn_FictionandLit_img.isUserInteractionEnabled = true
+        Homescrn_FictionandLit_img.addGestureRecognizer(fictionTapGestureRecognizer)
+        
         let nonFictionTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(nonFictionImageTapped))
-                HomeScrn_NonFictional_img.isUserInteractionEnabled = true
-                HomeScrn_NonFictional_img.addGestureRecognizer(nonFictionTapGestureRecognizer)
+        HomeScrn_NonFictional_img.isUserInteractionEnabled = true
+        HomeScrn_NonFictional_img.addGestureRecognizer(nonFictionTapGestureRecognizer)
     }
-
+    
+    func fetchBooks(){
+        
+        DataManager.shared.fetchBooks { books, error in
+            if let error = error{
+                print("error in fetching data:", error.localizedDescription)
+                return
+            }
+            self.bookDic = books ?? []
+            self.Homescreen_scrlView_allTimeBestSeller.reloadData()
+        }
+    }
+    
+//    --> this function is used for setting json data into firebase using for loop and called it into "viewdidload()"
+    
+//    func uploadDataToFirebase() {
+//        let db = Firestore.firestore()
+//        for item in bookDic{
+//            db.collection("Books").document(item.bookId).setData([
+//                "Author_Name": "",
+//                "Book_Content": "",
+//                "Book_Id": "",
+//                "Book_Image": "",
+//                "Book_Name": "",
+//                "Description": "",
+//                "Price": ""
+//                
+//            ])
+//        }
+//        
+//    }
+    
+    
+    @IBAction func HomePage_Cart_btn(_ sender: Any) {
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Cartpageviewcontroller") as! Cartpageviewcontroller
+        self.present(vc, animated: true)
+    }
 }
-
 extension HomePage_VC : UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return bookDic.count
     }
-    
-  
-    
-    
+ 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
       
         let cell = self.Homescreen_scrlView_allTimeBestSeller.dequeueReusableCell(withReuseIdentifier: "HomeScreen_collectionView_cell", for: indexPath) as! HomeScreen_collectionView_cell
@@ -109,6 +144,8 @@ extension HomePage_VC : UICollectionViewDelegate , UICollectionViewDataSource , 
         let cellwidth = (width / 2)
         return CGSize(width: cellwidth, height: 250)
     }
-   
+    
+ 
+ 
 }
 

@@ -1,5 +1,6 @@
 import UIKit
 import FirebaseFirestore
+import FirebaseAuth
 import Kingfisher
 
 class Cartpageviewcontroller: UIViewController {
@@ -9,11 +10,18 @@ class Cartpageviewcontroller: UIViewController {
     var db: Firestore!
     var cartItems: [CartItem] = []
     var totalAmount: Double = 0.0
+    var uid: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         db = Firestore.firestore()
+        if let currentUser = Auth.auth().currentUser {
+            uid = currentUser.uid
+        } else {
+            print("No user is signed in")
+        }
+
         fetchCartItems()
 
         tableView.dataSource = self
@@ -30,6 +38,11 @@ class Cartpageviewcontroller: UIViewController {
     }
 
     func fetchCartItems() {
+        guard let uid = uid else {
+            print("User ID is nil")
+            return
+        }
+
         if let savedCartItems = UserDefaults.standard.array(forKey: "cartItems") as? [[String: Any]] {
             self.cartItems = savedCartItems.map { data in
                 return CartItem(
@@ -45,7 +58,7 @@ class Cartpageviewcontroller: UIViewController {
             self.updateTotal()
         }
 
-        db.collection("cart").getDocuments { (querySnapshot, error) in
+        db.collection("user").document(uid).collection("cart").getDocuments { (querySnapshot, error) in
             if let error = error {
                 print("Error getting documents: \(error)")
             } else {
@@ -69,8 +82,13 @@ class Cartpageviewcontroller: UIViewController {
     }
 
     func deleteCartItem(at index: Int) {
+        guard let uid = uid else {
+            print("User ID is nil")
+            return
+        }
+
         let item = cartItems[index]
-        db.collection("cart").document(item.id).delete() { err in
+        db.collection("user").document(uid).collection("cart").document(item.id).delete() { err in
             if let err = err {
                 print("Error removing document: \(err)")
             } else {
@@ -156,3 +174,4 @@ extension Cartpageviewcontroller: CartPageTableViewCellDelegate {
         }
     }
 }
+ 

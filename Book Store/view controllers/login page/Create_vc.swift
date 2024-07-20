@@ -108,7 +108,7 @@ class Create_vc: UIViewController {
                 }
             }
             guard let uid = authResult?.user.uid else {return }
-            UserDefaults.standard.set(uid, forKey: "User_id")
+//            UserDefaults.standard.set(uid, forKey: "User_id")
             let db = Firestore.firestore()
             db.collection("user").document(uid).setData([
                 "name" : name,
@@ -120,29 +120,26 @@ class Create_vc: UIViewController {
                     print("Error Saving User details:\(error.localizedDescription)")
                 }else{
                     print("user Details Saved Successfully!")
+                    let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "navigate_home") as! UINavigationController
+                    self.present(vc, animated: true)
+
                 }
-              //  let storyboard = UIStoryboard(name: "Main", bundle: nil)
-             //   let vc = storyboard.instantiateViewController(withIdentifier: "Start_vc") as! Start_vc
-              //  self.navigationController?.pushViewController(vc, animated: true)
+//                self.performSegue(withIdentifier: "HomePage_VC", sender: self)
             }
             
         }
     }
     
-    func showAlert(title: String, message: String) {
-        // Function to show an alert with a title and message
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alert, animated: true)
-    }
+    
     
 }
 extension String {
-    func isValidEmail() -> Bool {
-        let regex = try! NSRegularExpression(pattern:
-                                                "^[a-zA-Z0-9 .!#$ &'+/=?^_'{|}--]+@[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9])?)$", options: .caseInsensitive)
-        return regex.firstMatch(in: self, options: [], range: NSRange(location: 0, length: count)) != nil
-    }
+//    func isValidEmail() -> Bool {
+//        let regex = try! NSRegularExpression(pattern:
+//                                                "^[a-zA-Z0-9 .!#$ &'+/=?^_'{|}--]+@[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9])?)$", options: .caseInsensitive)
+//        return regex.firstMatch(in: self, options: [], range: NSRange(location: 0, length: count)) != nil
+//    }
 }
 extension String {
     func  isValidPhoneNumber(_phoneNumber: String) -> Bool {
