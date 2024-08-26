@@ -1587,7 +1587,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Back"/>
                                                 <connections>
-                                                    <action selector="act_signup:" destination="KoA-A7-LXi" eventType="touchUpInside" id="dXw-4e-Wig"/>
+                                                    <action selector="login_back_button:" destination="KoA-A7-LXi" eventType="touchUpInside" id="tva-38-g4G"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1693,7 +1693,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accept our terms and conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZ9-KW-mMS">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accept our terms and conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZ9-KW-mMS">
                                                 <rect key="frame" x="25" y="350" width="270" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -1710,9 +1710,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbY-td-MFm">
                                                 <rect key="frame" x="25" y="473" width="270" height="35"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Create"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Back"/>
                                                 <connections>
-                                                    <action selector="Act_button:" destination="a7o-Td-w6n" eventType="touchUpInside" id="AOJ-FY-yIX"/>
+                                                    <action selector="create_page_back:" destination="a7o-Td-w6n" eventType="touchUpInside" id="fgw-vU-XW3"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1786,30 +1786,30 @@
         <scene sceneID="Kse-2O-Qql">
             <objects>
                 <viewController storyboardIdentifier="front_vc" id="OVz-j1-anl" customClass="front_vc" customModule="Book_Store" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="QBe-Ba-8A4">
+                    <view key="view" contentMode="scaleToFill" id="QBe-Ba-8A4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bF5-05-qqx">
-                                <rect key="frame" x="136" y="91.5" width="49" height="17.5"/>
+                                <rect key="frame" x="136" y="47.5" width="49" height="17.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join to Mega Novel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eig-Iw-WAB">
-                                <rect key="frame" x="25" y="142" width="270" height="21"/>
+                                <rect key="frame" x="25" y="98" width="270" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The World of Books at your fingertips" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xde-zh-qYl">
-                                <rect key="frame" x="25" y="185" width="270" height="21"/>
+                                <rect key="frame" x="25" y="141" width="270" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book" translatesAutoresizingMaskIntoConstraints="NO" id="cSJ-Nb-7NF">
-                                <rect key="frame" x="68" y="221" width="185" height="112.5"/>
+                                <rect key="frame" x="68" y="177" width="185" height="112.5"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zb9-gl-LGA">
-                                <rect key="frame" x="25" y="379" width="270" height="35"/>
+                                <rect key="frame" x="25" y="335" width="270" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Login"/>
                                 <connections>
@@ -1817,7 +1817,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEo-B5-0ca">
-                                <rect key="frame" x="25" y="451" width="270" height="35"/>
+                                <rect key="frame" x="25" y="407" width="270" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Create an Account"/>
                                 <connections>
@@ -1875,10 +1875,9 @@
         <!--Navigation Controller-->
         <scene sceneID="MUe-Jd-nhh">
             <objects>
-                <navigationController storyboardIdentifier="navigate_login" automaticallyAdjustsScrollViewInsets="NO" id="37R-Xa-syU" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navigate_login" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="37R-Xa-syU" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mdn-MS-062">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1899,8 +1898,8 @@
         <image name="arrowshape.backward.fill" catalog="system" width="128" height="104"/>
         <image name="arrowshape.turn.up.backward" catalog="system" width="128" height="104"/>
         <image name="australsign.square.fill" catalog="system" width="128" height="114"/>
-        <image name="book" width="112.5" height="112.5"/>
         <image name="book" catalog="system" width="128" height="99"/>
+        <image name="book" width="112.5" height="112.5"/>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="login" width="112.5" height="112.5"/>

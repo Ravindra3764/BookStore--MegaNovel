@@ -16,6 +16,12 @@ class login_vc: UIViewController {
         super.viewDidLoad()
   
      }
+    
+    
+    @IBAction func login_back_button(_ sender: Any) {
+        
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func act_signup(_ sender: UIButton) {
          let email = self.TF_email.text!
         let password = self.TF_password.text!

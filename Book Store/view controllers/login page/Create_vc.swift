@@ -25,6 +25,12 @@ class Create_vc: UIViewController {
     
     @IBOutlet weak var TF_password: UITextField!
     
+    
+    @IBAction func create_page_back(_ sender: UIButton) {
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func Act_button(_ sender: UIButton) {
       //  let storyboard = UIStoryboard(name: "Main", bundle: nil)
        // let vc = storyboard.instantiateViewController(withIdentifier: "Start_vc") as! Start_vc

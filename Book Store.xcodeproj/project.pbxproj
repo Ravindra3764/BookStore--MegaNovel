@@ -580,6 +580,7 @@
 				DEVELOPMENT_TEAM = X24YPATRRX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Book Store/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mega Novel";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Home;
@@ -614,6 +615,7 @@
 				DEVELOPMENT_TEAM = X24YPATRRX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Book Store/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mega Novel";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Home;
