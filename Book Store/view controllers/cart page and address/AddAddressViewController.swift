@@ -8,6 +8,10 @@ protocol AddAddressViewControllerDelegate: AnyObject {
 
 class AddAddressViewController: UIViewController {
     weak var delegate: AddAddressViewControllerDelegate?
+    var uid: String?
+    let db = Firestore.firestore()
+
+
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var mobileNumberTextField: UITextField!
@@ -39,10 +43,17 @@ class AddAddressViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let currentUser = Auth.auth().currentUser {
+            uid = currentUser.uid
+         } else {
+            print("No user is signed in")
+        }
+        
         setupTextFields()
         setupLabels()
         setupUI()
-    }
+        fetchUserData()
+     }
     
     func setupUI() {
         // Set up cashOnDeliveryButton
@@ -154,6 +165,7 @@ class AddAddressViewController: UIViewController {
             cashOnDeliveryButton.isEnabled = true
             otherButton.isEnabled = true
             placeOrderButton.isEnabled = true
+            showAlert(title: "Congrats", message: "Your address saved successfully")
             
             // Save to Firebase
             saveAddressToFirebase()
@@ -249,6 +261,7 @@ class AddAddressViewController: UIViewController {
                 self?.successLabel.text = "Order Placed Successfully"
                 self?.successLabel.textColor = .green
                 self?.delegate?.clearCart() // Clear cart after successful order
+                self?.showAlert(title: "Congratulation", message: "Your order places Successfully")
               }
         }
     }
@@ -354,4 +367,48 @@ extension AddAddressViewController: UITextFieldDelegate{
         }
     }
 
+}
+extension AddAddressViewController{
+    
+    func fetchUserData() {
+        guard let documentID = uid else {
+            print("UID is nil")
+            return
+        }
+        
+        db.collection("user").document(documentID).collection("addresses").getDocuments{
+            (querySnapshot, error) in
+            if let error = error {
+                print("Error fetching document: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let documents = querySnapshot?.documents, !documents.isEmpty else {
+                print("Document does not exist")
+                return
+            }
+            
+            let document = documents.first
+            let data = document?.data()
+            let name = data?["name"] as? String ?? "No Name"
+            let mobileNumber = data?["mobileNumber"] as? String ?? "No Mobile No."
+            let pinCode = data?["pinCode"] as? String ?? "No Pincode"
+            let address = data?["address"] as? String ?? "No Address"
+            let locality = data?["locality"] as? String ?? "N/A"
+            let city = data?["city"] as? String ?? "N/A"
+            let state = data?["state"] as? String ?? "N/A"
+            
+            print(city, state)
+            
+              
+            self.nameTextField.text = name
+            self.mobileNumberTextField.text = mobileNumber
+            self.pinCodeTextField.text = pinCode
+            self.addressTextField.text = address
+            self.localityTextField.text = locality
+            self.cityTextField.text = city
+            self.stateTextField.text = state
+
+        }
+    }
 }

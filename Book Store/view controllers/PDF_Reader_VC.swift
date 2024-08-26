@@ -8,27 +8,40 @@
 import UIKit
 import WebKit
 
-class PDF_Reader_VC: UIViewController {
+class PDF_Reader_VC: UIViewController, WKNavigationDelegate {
     var book: BookData?
 
     @IBOutlet weak var PDFReader_content_loader: WKWebView!
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        showProgressBar()
-        if let book = book, let url = URL(string: book.bookContent) {
+        PDFReader_content_loader.navigationDelegate = self
+
+         if let book = book, let url = URL(string: book.bookContent) {
+             self.showProgressBar()
                     print("content link:",url)
                     let urlRequest = URLRequest(url: url)
-                    PDFReader_content_loader.load(urlRequest)
-                }
+                     PDFReader_content_loader.load(urlRequest)
+                 }
 
-            hideProgressBar()
-        
      }
     
    
     @IBAction func Pdf_reader_cancel_btn(_ sender: UIButton) {
-//        self.navigationController?.popViewController(animated: true)
-        self.dismiss(animated: true)
+         self.dismiss(animated: true)
     }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+            self.hideProgressBar()
+        }
+
+        func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+            self.hideProgressBar()
+            self.showAlertToast(message: error.localizedDescription)        }
+
+        func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+            self.hideProgressBar()
+            print("Failed to start loading content: \(error.localizedDescription)")
+        }
+
 }

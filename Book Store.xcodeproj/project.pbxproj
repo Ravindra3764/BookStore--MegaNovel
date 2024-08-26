@@ -19,6 +19,7 @@
 		8E86AAF52C2A8FB200F0067F /* AllBook_listing_VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E86AAF32C2A8FB200F0067F /* AllBook_listing_VC.xib */; };
 		8E86AAF92C2A932000F0067F /* AllBook_listing_Page_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E86AAF82C2A932000F0067F /* AllBook_listing_Page_VC.swift */; };
 		8E90E15C2C3D06800010DF02 /* Pods_Book_Store.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4584717DF348A980791B78EB /* Pods_Book_Store.framework */; };
+		8EB654A22C4E04E1005DE9EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9BFAB322C194D390073640C /* Assets.xcassets */; };
 		8EBC30C32C422A5E002D3508 /* AddAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC30C22C422A5E002D3508 /* AddAddressViewController.swift */; };
 		8EBC30C52C426942002D3508 /* Create_vc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC30C42C426942002D3508 /* Create_vc.swift */; };
 		8EBC30C72C426947002D3508 /* front_vc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC30C62C426947002D3508 /* front_vc.swift */; };
@@ -44,7 +45,6 @@
 		A9BFAB2A2C194D340073640C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFAB292C194D340073640C /* AppDelegate.swift */; };
 		A9BFAB2C2C194D340073640C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BFAB2B2C194D340073640C /* SceneDelegate.swift */; };
 		A9BFAB312C194D340073640C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9BFAB2F2C194D340073640C /* Home.storyboard */; };
-		A9BFAB332C194D390073640C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9BFAB322C194D390073640C /* Assets.xcassets */; };
 		A9BFAB362C194D390073640C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9BFAB342C194D390073640C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -338,10 +338,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB654A22C4E04E1005DE9EC /* Assets.xcassets in Resources */,
 				A9BFAB362C194D390073640C /* LaunchScreen.storyboard in Resources */,
 				8E1485E72C35C5CA00D5FB70 /* GoogleService-Info.plist in Resources */,
 				A99AAF5C2C1999E40046D9FC /* HomeScreen_collectionView_cell.xib in Resources */,
-				A9BFAB332C194D390073640C /* Assets.xcassets in Resources */,
 				A9BFAB312C194D340073640C /* Home.storyboard in Resources */,
 				8E5F01272C3FF854007D6E8B /* cartpage_tableview_cell.xib in Resources */,
 				A9B4B4F22C1C043C00342FAF /* BookType_coll_cell.xib in Resources */,

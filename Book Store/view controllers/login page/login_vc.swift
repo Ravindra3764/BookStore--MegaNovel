@@ -23,18 +23,21 @@ class login_vc: UIViewController {
                    showAlert(title: "Error",message: "Please enter both email & password.")
                            return
                        }
+        
                         showProgressBar()
-                        Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
-                            guard let uid = authResult?.user.uid else {return }
+                         Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
                             if let error = error {
-                                
-                                
+                           
                                 self.hideProgressBar()
                                print("Error logging in: \(error.localizedDescription)")
-                                self.showAlert(title: "Error", message: "Invalid Email or credentials")
+                                self.showAlertToast(message: error.localizedDescription)
+//                                self.showAlert(title: "Error", message: "Invalid Email or credentials")
                                  return
                            }
                             self.hideProgressBar()
+                             
+                             guard let uid = authResult?.user.uid else {return }
+
 
                            // User successfully logged in
                            print("Login successful!")

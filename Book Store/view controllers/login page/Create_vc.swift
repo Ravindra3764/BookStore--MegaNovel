@@ -84,7 +84,7 @@ class Create_vc: UIViewController {
     }
     
     func signup_firebase(phonenumber: String){
-        let Email = self.TF_Email.text!
+         let Email = self.TF_Email.text!
         let password = self.TF_password.text!
         let phonenumber = self.TF_phonenumber.text!
         let name = self.TF_name.text!
@@ -96,9 +96,9 @@ class Create_vc: UIViewController {
                 if let  errorcode = AuthErrorCode.Code(rawValue: nsError.code){
                     switch errorcode {
                     case .invalidEmail:
-                        print("Invalid Email Format.")
+                        self.showAlertToast(message: "Invalid Email Format")
                     case .emailAlreadyInUse:
-                        print("Email Already in use.")
+                        self.showAlertToast(message: "Email Already in use")
                     default:
                         print("Error Saving User details:\(nsError.localizedDescription)")
                     }
@@ -125,8 +125,7 @@ class Create_vc: UIViewController {
                     self.present(vc, animated: true)
 
                 }
-//                self.performSegue(withIdentifier: "HomePage_VC", sender: self)
-            }
+             }
             
         }
     }

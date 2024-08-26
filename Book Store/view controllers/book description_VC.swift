@@ -19,8 +19,8 @@ class book_description_VC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        Book_description_book_description.lineBreakMode = .byTruncatingTail
-        Book_description_book_description.numberOfLines = 4
+//        Book_description_book_description.lineBreakMode = .byTruncatingTail
+//        Book_description_book_description.numberOfLines = 4
         
         if let book = book {
             Book_description_book_title.text = book.bookName

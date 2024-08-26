@@ -1,10 +1,3 @@
-//
-//  Custom View.swift
-//  Book Store
-//
-//  Created by Apple 14 on 12/06/24.
-//
-
 import UIKit
 import MBProgressHUD
 
@@ -29,6 +22,17 @@ extension UIViewController{
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
          self.present(alert, animated: true, completion: nil)
     }
+    
+    func showAlertToast(message:String) {
+        let alert = UIAlertController(title: "", message: message, preferredStyle: .actionSheet)
+        self.present(alert, animated: true)
+        
+        let when = DispatchTime.now() + 2
+        DispatchQueue.main.asyncAfter(deadline: when){
+            alert.dismiss(animated: true, completion: nil)
+        }
+    }
+
 
     
 }

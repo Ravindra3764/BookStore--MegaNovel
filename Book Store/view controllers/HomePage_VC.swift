@@ -28,7 +28,7 @@ class HomePage_VC: UIViewController {
         self.Homescreen_scrlView_allTimeBestSeller.reloadData()
         
         
-//        self.uploadDataToFirebase()
+        //self.uploadDataToFirebase()
 //        
         
         // here "UITapGestureRecognizer" method is used for make images clickcable
@@ -47,6 +47,7 @@ class HomePage_VC: UIViewController {
         DataManager.shared.fetchBooks { books, error in
             if let error = error{
                 print("error in fetching data:", error.localizedDescription)
+                self.showAlertToast(message: error.localizedDescription)
                 return
             }
             self.bookDic = books ?? []
@@ -58,19 +59,16 @@ class HomePage_VC: UIViewController {
     
 //    func uploadDataToFirebase() {
 //        let db = Firestore.firestore()
-//        for item in bookDic{
-//            db.collection("Books").document(item.bookId).setData([
-//                "Author_Name": "",
-//                "Book_Content": "",
-//                "Book_Id": "",
-//                "Book_Image": "",
-//                "Book_Name": "",
-//                "Description": "",
-//                "Price": ""
-//                
-//            ])
-//        }
-//        
+//             db.collection("Books").document("18").setData([
+//                "Author_Name": "Arundhati Roy",
+//                   "Book_Content": " https://theasrudiancenter.wordpress.com/wp-content/uploads/2017/01/mp074_the-god-of-small-things-by-arundhati-roy.pdf",
+//                   "Book_Id": "018",
+//                   "Book_Image": "https://m.media-amazon.com/images/I/91saO95VziL._SY522_.jpg",
+//                   "Book_Name": "The God of Small Things",
+//                   "Description": "The God of Small Things is a story about the childhood experiences of fraternal twins in the state of Kerala in India, and how the events shape their lives.",
+//                   "Price": 15
+//
+//        ])
 //    }
     
     

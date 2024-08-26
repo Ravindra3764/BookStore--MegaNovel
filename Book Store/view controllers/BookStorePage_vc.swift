@@ -12,11 +12,10 @@ class BookStorePage_vc: UIViewController {
 
     @IBOutlet weak var BookStore_featured_coll_view: UICollectionView!
     
-    @IBOutlet weak var bookStore_kidsyoung_coll_view: UICollectionView!
-    @IBOutlet weak var BookStore_booktype_coll_view: UICollectionView!
+    @IBOutlet weak var bookStore_non_fictional_coll_view: UICollectionView!
+    @IBOutlet weak var bookStore_fictional_coll_view: UICollectionView!
     
-    @IBOutlet weak var bookStore_nonFictional_coll_View: UICollectionView!
-    
+ 
     var bookDic : [BookData] = []
 
     let booktitleArr = ["Biography" ,"Short Story" ,"Histry" ,"Philosophy" , "poetry"]
@@ -31,26 +30,35 @@ class BookStorePage_vc: UIViewController {
 
         self.BookStore_featured_coll_view.register(UINib(nibName: "BookStore_featured_coll_cell", bundle: nil), forCellWithReuseIdentifier: "BookStore_featured_coll_cell")
  
-        self.BookStore_booktype_coll_view.register(UINib(nibName: "BookType_coll_cell", bundle: nil), forCellWithReuseIdentifier: "BookType_coll_cell")
+        self.bookStore_fictional_coll_view.register(UINib(nibName: "BookType_coll_cell", bundle: nil), forCellWithReuseIdentifier: "BookType_coll_cell")
  
-        self.bookStore_kidsyoung_coll_view.register(UINib(nibName: "BookType_coll_cell", bundle: nil), forCellWithReuseIdentifier: "BookType_coll_cell")
+        self.bookStore_non_fictional_coll_view.register(UINib(nibName: "BookType_coll_cell", bundle: nil), forCellWithReuseIdentifier: "BookType_coll_cell")
         
         fetchBooks()
  
 //        self.bookStore_nonFictional_coll_View.register(UINib(nibName: "BookType_coll_cell", bundle: nil), forCellWithReuseIdentifier: "BookType_coll_cell")
     }
     
+    private func shuffleAndReloadData() {
+        self.bookDic.shuffle()
+        self.bookStore_fictional_coll_view.reloadData()
+     }
+
+    
     func fetchBooks(){
         
         DataManager.shared.fetchBooks { books, error in
             if let error = error{
                 print("Error in fetching data:", error.localizedDescription)
+                self.showAlertToast(message: error.localizedDescription)
+
                 return
             }
             self.bookDic = books ?? []
+            self.shuffleAndReloadData()
             self.BookStore_featured_coll_view.reloadData()
-            self.BookStore_booktype_coll_view.reloadData()
-            self.bookStore_kidsyoung_coll_view.reloadData()
+            self.bookStore_fictional_coll_view.reloadData()
+            self.bookStore_non_fictional_coll_view.reloadData()
         }
     }
     
@@ -63,12 +71,12 @@ extension BookStorePage_vc : UICollectionViewDelegate , UICollectionViewDataSour
             if collectionView == self.BookStore_featured_coll_view {
                 return bookimageArr.count
             }
-        else if collectionView == self.BookStore_booktype_coll_view  {
+        else if collectionView == self.bookStore_fictional_coll_view  {
             return bookDic.count
         }
 
         
-        else if collectionView == bookStore_kidsyoung_coll_view{
+        else if collectionView == bookStore_non_fictional_coll_view{
             return bookDic.count
         }
         else{
@@ -85,15 +93,15 @@ extension BookStorePage_vc : UICollectionViewDelegate , UICollectionViewDataSour
             cell.FeatureBook_title.text = self.booktitleArr[indexPath.row]
         cell.FeatureBook_image.image =  self.bookimageArr[indexPath.row]
         return cell
-        }else if collectionView == self.BookStore_booktype_coll_view{
-            let cell = self.BookStore_booktype_coll_view.dequeueReusableCell(withReuseIdentifier: "BookType_coll_cell", for: indexPath) as! BookType_coll_cell
+        }else if collectionView == self.bookStore_fictional_coll_view{
+            let cell = self.bookStore_fictional_coll_view.dequeueReusableCell(withReuseIdentifier: "BookType_coll_cell", for: indexPath) as! BookType_coll_cell
             
             let list = bookDic[indexPath.row]
             
             if let url = URL(string: list.bookImage){
                 
                 cell.BookTypeImage.kf.setImage(with: url)
-             }
+              }
             else{
                 
                 cell.BookTypeImage.image = UIImage(named: "book image 2")
@@ -103,7 +111,7 @@ extension BookStorePage_vc : UICollectionViewDelegate , UICollectionViewDataSour
             return cell
          }
         else {
-            let cell = self.bookStore_kidsyoung_coll_view.dequeueReusableCell(withReuseIdentifier: "BookType_coll_cell", for: indexPath) as! BookType_coll_cell
+            let cell = self.bookStore_non_fictional_coll_view.dequeueReusableCell(withReuseIdentifier: "BookType_coll_cell", for: indexPath) as! BookType_coll_cell
             let list = bookDic[indexPath.row]
             
             if let url = URL(string: list.bookImage){

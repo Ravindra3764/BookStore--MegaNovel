@@ -7,7 +7,8 @@ class Cartpageviewcontroller: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalAmountLabel: UILabel!
 
-    var db: Firestore!
+    @IBOutlet weak var Item_total_label: UILabel!
+     var db: Firestore!
     var cartItems: [CartItem] = []
     var totalAmount: Double = 0.0
     var uid: String?
@@ -103,6 +104,7 @@ class Cartpageviewcontroller: UIViewController {
     func updateTotal() {
         totalAmount = cartItems.reduce(0) { $0 + $1.price }
         totalAmountLabel.text = String(format: "$%.2f", totalAmount)
+        Item_total_label.text = String(format: "$%.2f", totalAmount)
     }
 
     @IBAction func checkoutTapped(_ sender: UIButton) {
